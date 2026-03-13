@@ -3,7 +3,7 @@
    target="_blank"
    rel="noopener"
    aria-label="View ORCID record">
-  <img src="static/assets/img/orcid.svg"
+  <img src="static/assets/img/ORCID.svg"
        alt="ORCID iD"
        style="width:20px;height:20px;vertical-align:middle;">
 </a>
