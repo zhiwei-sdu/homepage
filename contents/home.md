@@ -4,23 +4,17 @@ I am currently a Research Fellow at the School of Physical and Mathematical Scie
 [Google Scholar Profile - Longlong Li](https://scholar.google.com.hk/citations?user=kiaiB_oAAAAJ)
 
 ### Contact
-- **Email:** longlee[at]mail.sdu.edu.cn
+- **Email:** Zhiweizh@mail.sdu.edu.cn
 
 ### Education
 - Shandong University, China  
-  Ph.D. Candidate in Data Science  
-  Sept. 2019 – Dec. 2025  
+  Ph.D. Candidate in Operations Research and Contro  
+  Sept. 2023 –  
   Advisor: Prof. Guanghui Wang [[Homepage]](https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm)<br>
 
-- Nanyang Technological University (NTU), Singapore  
-  School of Physical and Mathematical Sciences (SPMS)  
-  Visiting Student  
-  Oct. 2023 – Oct. 2025  
-  Advisor: Prof. Kelin Xia [[Homepage]](https://personal.ntu.edu.sg/XIAKELIN/)<br>
-
-- Shandong University, China  
-  B.Sc. in Mathematics and Applied Mathematics  
-  Sept. 2015 – Jun. 2019
+- Harbin Institute of Technology, China  
+  B.Sc. in Information and Computing Science 
+  Sept. 2019 – Jun. 2023
   
 ### Research Interests
-Graph Neural Networks, Topological Deep Learning, AI for Science
+Graph theory, Probabilistic Method
