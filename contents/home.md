@@ -1,4 +1,4 @@
-###### Zhiwei Zhang | 张志伟
+Zhiwei Zhang | 张志伟
 <a href="https://orcid.org/0009-0007-6706-6070"
    target="_blank"
    rel="noopener"
@@ -7,7 +7,6 @@
        alt="ORCID iD"
        style="width:20px;height:20px;vertical-align:middle;">
 </a>
-
 I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandong University, Jinan.
 
 <!--### Google Schol
