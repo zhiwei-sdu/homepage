@@ -1,9 +1,20 @@
 ### Talks
 
--	The 11th Cross-Strait Conference on Graph Theory and Combinatorics (Online)  
-  Talk: “K-Core Decomposition Algorithm”,  Aug.19-21, 2021  
+-	Youth Forum on Graph Theory \& Combinatorics at SDU
+  Talk: “Arbitrary orientations of cycles in oriented graphs”,  Apr. 2025, Jinan, China.  
  	
-- Mathematical Foundations of Communication Seminar (Hangzhou, China)  
-  Talk: “Spatially Coupled Codes”, Oct.27-28, 2019
+- Shanghai Center for Mathematical Science PhD Workshop (Graph Theory \& Combinatorics)
+  Talk: “Arbitrary orientations of cycles in oriented graphs”, Dec. 2025, Shanghai, China.
 
 
+### Conferences
+
+- Tianyuan Symposium on Graph Theory and Combinatorics, Oct. 2024, Kunming, China.
+
+- 2025 Discrete Mathematics Symposium, Mar. 2025, Jinan, China.
+
+-  Annual Meeting of the Graph Theory & Combinatorics Branch of the Operations Research Society of China, Jul. 2025, Yantai, China.
+
+-  Beijing University of Posts and Telecommunications Summer School: Graph Theory \& Combinatorics, Aug. 2025, Beijing, China.
+
+-  23rd Annual Conference of CSIAM, Oct. 2025, Changsha, China.
