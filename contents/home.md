@@ -15,7 +15,7 @@ I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandon
 [Google Scholar Profile - Longlong Li](https://scholar.google.com.hk/citations?user=kiaiB_oAAAAJ)-->
 
 ### Contact
-- **Email:** Zhiweizh@mail.sdu.edu.cn
+- **Email:** zhiweizh@mail.sdu.edu.cn
 
 ### Education
 - Shandong University, China  
