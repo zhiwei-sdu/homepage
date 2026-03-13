@@ -1,9 +1,9 @@
 ### Talks
 
--	Youth Forum on Graph Theory \& Combinatorics at SDU
+-	Youth Forum on Graph Theory \& Combinatorics at SDU <br/>
   Talk: “Arbitrary orientations of cycles in oriented graphs”,  Apr. 2025, Jinan, China.  
  	
-- Shanghai Center for Mathematical Science PhD Workshop (Graph Theory \& Combinatorics)
+- Shanghai Center for Mathematical Science PhD Workshop (Graph Theory \& Combinatorics) <br/>
   Talk: “Arbitrary orientations of cycles in oriented graphs”, Dec. 2025, Shanghai, China.
 
 
@@ -17,4 +17,5 @@
 
 -  Beijing University of Posts and Telecommunications Summer School: Graph Theory \& Combinatorics, Aug. 2025, Beijing, China.
 
--  The 23rd Annual Conference of the China Society for Industrial and Applied Mathematics (Poster: “Arbitrary orientations of cycles in oriented graphs”), Oct. 2025, Changsha, China.
+-  The 23rd Annual Conference of the China Society for Industrial and Applied Mathematics <br/>
+ (Poster: “Arbitrary orientations of cycles in oriented graphs”), Oct. 2025, Changsha, China.
