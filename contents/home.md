@@ -1,4 +1,4 @@
-<p style="font-size: 24px; font-weight: 700;">Zhiwei Zhang | 张志伟
+<p style="font-size: 30px; font-weight: 700;">Zhiwei Zhang | 张志伟
 <a href="https://orcid.org/0009-0007-6706-6070"
    target="_blank"
    rel="noopener"
