@@ -1,7 +1,7 @@
 I am currently a Research Fellow at the School of Physical and Mathematical Sciences (SPMS), Nanyang Technological University (NTU), Singapore.
 
-### Google Schol
-[Google Scholar Profile - Longlong Li](https://scholar.google.com.hk/citations?user=kiaiB_oAAAAJ)
+<!--### Google Schol
+[Google Scholar Profile - Longlong Li](https://scholar.google.com.hk/citations?user=kiaiB_oAAAAJ)-->
 
 ### Contact
 - **Email:** Zhiweizh@mail.sdu.edu.cn
