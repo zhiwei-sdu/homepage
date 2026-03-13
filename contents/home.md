@@ -19,8 +19,8 @@ I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandon
 
 ### Education
 - Shandong University, China  
-  Ph.D. Candidate in Operations Research and Contro  
-  Sept. 2023 –  
+  Ph.D. Candidate in Operations Research and Cybernetics
+  Sept. 2023 –  Present
   Advisor: Prof. <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm" target="_blank" rel="noopener">Guanghui Wang</a> <br>
 
 - Harbin Institute of Technology, China  
@@ -28,4 +28,4 @@ I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandon
   Sept. 2019 – Jun. 2023
   
 ### Research Interests
-Graph theory, Probabilistic Method
+Graph theory, Random graph, Probabilistic Method.
