@@ -7,7 +7,7 @@
        alt="ORCID iD"
        style="width:20px;height:20px;vertical-align:middle;">
 </a>
-</p>p>
+</p>
 
 I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandong University, Jinan.
 
