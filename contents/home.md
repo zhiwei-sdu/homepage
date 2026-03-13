@@ -23,7 +23,7 @@ I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandon
   Advisor: Prof. <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm" target="_blank" rel="noopener">Guanghui Wang</a> <br>
 
 - Harbin Institute of Technology, China  
-  B.Sc. in Information and Computing Science
+  B.Sc. in Information and Computing Science<br/>
   Sept. 2019 – Jun. 2023
   
 ### Research Interests
