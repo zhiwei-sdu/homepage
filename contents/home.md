@@ -1,4 +1,13 @@
-I am currently a Research Fellow at the School of Physical and Mathematical Sciences (SPMS), Nanyang Technological University (NTU), Singapore.
+######Zhiwei Zhang | 张志伟<a href="https://orcid.org/0009-0007-6706-6070"
+   target="_blank"
+   rel="noopener"
+   aria-label="View ORCID record">
+  <img src="static/assets/img/orcid.svg"
+       alt="ORCID iD"
+       style="width:20px;height:20px;vertical-align:middle;">
+</a>
+
+I am currently a Ph.D. student at the Interdisciplinary Research Center, Shandong University, Jinan.
 
 <!--### Google Schol
 [Google Scholar Profile - Longlong Li](https://scholar.google.com.hk/citations?user=kiaiB_oAAAAJ)-->
@@ -13,7 +22,7 @@ I am currently a Research Fellow at the School of Physical and Mathematical Scie
   Advisor: Prof. <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm" target="_blank" rel="noopener">Guanghui Wang</a> <br>
 
 - Harbin Institute of Technology, China  
-  B.Sc. in Information and Computing Science 
+  B.Sc. in Information and Computing Science
   Sept. 2019 – Jun. 2023
   
 ### Research Interests
