@@ -17,4 +17,4 @@
 
 -  Beijing University of Posts and Telecommunications Summer School: Graph Theory \& Combinatorics, Aug. 2025, Beijing, China.
 
--  23rd Annual Conference of CSIAM, Oct. 2025, Changsha, China.
+-  The 23rd Annual Conference of the China Society for Industrial and Applied Mathematics (Poster: “Arbitrary orientations of cycles in oriented graphs”), Oct. 2025, Changsha, China.
