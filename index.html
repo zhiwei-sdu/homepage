@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Zhiwei Zhang's academic homepage">
   <meta name="author" content="Zhiwei Zhang">
+
   <title>Zhiwei Zhang</title>
 
   <style>
     :root {
-      --text: #111;
-      --muted: #555;
-      --link: #1b4f8a;
-      --rule: #b9b9b9;
-      --paper: #fff;
+      --text: #111111;
+      --muted: #555555;
+      --link: #174d8c;
+      --rule: #c8c8c8;
+      --paper: #ffffff;
+      --block: #f7f7f7;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -31,7 +38,7 @@
 
     .page {
       width: min(900px, calc(100% - 40px));
-      margin: 34px auto 24px;
+      margin: 32px auto 24px;
     }
 
     a {
@@ -44,6 +51,10 @@
       text-decoration: underline;
     }
 
+    /* =========================
+       Top
+       ========================= */
+
     .masthead {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 190px;
@@ -54,8 +65,8 @@
     h1 {
       margin: 0 0 12px;
       font-size: 32px;
-      font-weight: normal;
       line-height: 1.15;
+      font-weight: normal;
     }
 
     .affiliation {
@@ -66,32 +77,6 @@
       margin: 0 0 15px;
     }
 
-    .nav {
-      margin: 16px 0 0;
-      line-height: 1.8;
-    }
-
-    .nav a {
-      white-space: nowrap;
-    }
-
-    .sep {
-      color: #777;
-      padding: 0 6px;
-    }
-
-    .photo-wrap {
-      text-align: right;
-    }
-
-    .photo {
-      width: 190px;
-      height: 190px;
-      object-fit: cover;
-      border: 0;
-      display: inline-block;
-    }
-
     .orcid-icon {
       width: 20px;
       height: 20px;
@@ -99,25 +84,99 @@
       margin-left: 5px;
     }
 
+    /* =========================
+       Photo
+       ========================= */
+
+    .photo-wrap {
+      text-align: right;
+    }
+
+    .photo {
+      width: 190px;
+      height: auto;
+
+      /*
+        Important:
+        Do not force the photo into a square.
+        This preserves the complete original photograph.
+      */
+      object-fit: contain;
+      object-position: top center;
+
+      display: inline-block;
+      border: 0;
+    }
+
+    /* =========================
+       Navigation
+       ========================= */
+
+    .nav {
+      margin: 16px 0 0;
+      line-height: 1.9;
+    }
+
+    .nav a {
+      white-space: nowrap;
+    }
+
+    .sep {
+      color: #888888;
+      padding: 0 6px;
+    }
+
+    /* =========================
+       Sections
+       ========================= */
+
     hr {
       border: 0;
       border-top: 1px solid var(--rule);
-      margin: 24px 0 26px;
+      margin: 24px 0 0;
     }
 
     section {
-      scroll-margin-top: 18px;
-      margin: 0 0 30px;
+      scroll-margin-top: 20px;
+
+      margin: 0;
+      padding: 25px 0 28px;
+
+      border-top: 1px solid var(--rule);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+    }
+
+    /*
+      Very light background blocks.
+      They make the different parts easier to distinguish
+      without making the page look too modern or decorative.
+    */
+
+    #manuscripts,
+    #notes {
+      background: var(--block);
+
+      margin-left: -20px;
+      margin-right: -20px;
+
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     h2 {
-      margin: 0 0 13px;
+      margin: 0 0 14px;
+
       font-size: 23px;
+      line-height: 1.25;
       font-weight: normal;
     }
 
     h3 {
-      margin: 19px 0 8px;
+      margin: 20px 0 9px;
+
       font-size: 18px;
       font-weight: normal;
     }
@@ -127,53 +186,64 @@
     }
 
     ul {
-      margin: 8px 0 0 23px;
+      margin: 8px 0 0 24px;
       padding: 0;
     }
 
     li {
-      margin: 0 0 12px;
+      margin: 0 0 13px;
       padding-left: 2px;
     }
 
+    /* =========================
+       Publications
+       ========================= */
+
     .paper-title {
-      font-weight: normal;
+      display: block;
+      margin-bottom: 2px;
     }
 
     .paper-meta {
       display: block;
-      margin-top: 1px;
+      margin-left: 0;
     }
 
     .venue {
       font-style: italic;
     }
 
+    /* =========================
+       Education
+       ========================= */
+
     .education-entry {
-      margin: 0 0 15px;
+      margin: 0 0 17px;
     }
 
-    .education-entry .school {
-      font-weight: normal;
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: 14px;
-    }
+    /* =========================
+       Footer
+       ========================= */
 
     footer {
+      margin-top: 10px;
+      padding: 15px 0 8px;
+
       border-top: 1px solid var(--rule);
-      margin-top: 34px;
-      padding: 13px 0 6px;
-      font-size: 14px;
+
       color: var(--muted);
+      font-size: 14px;
     }
 
+    /* =========================
+       Mobile
+       ========================= */
+
     @media (max-width: 680px) {
+
       .page {
         width: min(100% - 28px, 900px);
-        margin-top: 22px;
+        margin-top: 20px;
       }
 
       .masthead {
@@ -182,13 +252,13 @@
       }
 
       .photo-wrap {
-        text-align: left;
         order: -1;
+        text-align: left;
       }
 
       .photo {
         width: 155px;
-        height: 155px;
+        height: auto;
       }
 
       h1 {
@@ -198,205 +268,563 @@
       .nav {
         line-height: 2;
       }
+
+      #manuscripts,
+      #notes {
+        margin-left: -14px;
+        margin-right: -14px;
+
+        padding-left: 14px;
+        padding-right: 14px;
+      }
     }
   </style>
 </head>
 
+
 <body>
+
   <main class="page">
+
+    <!-- ==================================================
+         Header
+         ================================================== -->
+
     <header class="masthead" id="home">
+
       <div>
+
         <h1>
           Zhiwei Zhang | 张志伟
-          <a href="https://orcid.org/0009-0007-6706-6070"
-             target="_blank"
-             rel="noopener"
-             aria-label="View ORCID record">
-            <img class="orcid-icon" src="static/assets/img/ORCID.svg" alt="ORCID iD">
+
+          <a
+            href="https://orcid.org/0009-0007-6706-6070"
+            target="_blank"
+            rel="noopener"
+            aria-label="View ORCID record"
+          >
+            <img
+              class="orcid-icon"
+              src="static/assets/img/ORCID.svg"
+              alt="ORCID iD"
+            >
           </a>
+
         </h1>
+
 
         <p class="affiliation">
           I am currently a Ph.D. student at the Interdisciplinary Research Center,
           Shandong University, Jinan.
         </p>
 
+
         <p class="contact">
           Email:
-          <a href="mailto:zhiweizh@mail.sdu.edu.cn">zhiweizh@mail.sdu.edu.cn</a>
+          <a href="mailto:zhiweizh@mail.sdu.edu.cn">
+            zhiweizh@mail.sdu.edu.cn
+          </a>
         </p>
 
+
         <nav class="nav" aria-label="Homepage sections">
-          <a href="#education">Education</a><span class="sep">|</span>
-          <a href="#research">Research Interests</a><span class="sep">|</span>
-          <a href="#manuscripts">Manuscripts</a><span class="sep">|</span>
-          <a href="#journal-publications">Journal publications</a><span class="sep">|</span>
-          <a href="#talks">Talks &amp; Conferences</a>
+
+          <a href="#education">
+            Education
+          </a>
+
+          <span class="sep">|</span>
+
+          <a href="#research">
+            Research Interests
+          </a>
+
+          <span class="sep">|</span>
+
+          <a href="#manuscripts">
+            Manuscripts
+          </a>
+
+          <span class="sep">|</span>
+
+          <a href="#journal-publications">
+            Journal publications
+          </a>
+
+          <span class="sep">|</span>
+
+          <a href="#notes">
+            Notes
+          </a>
+
+          <span class="sep">|</span>
+
+          <a href="#talks">
+            Talks &amp; Conferences
+          </a>
+
         </nav>
+
       </div>
 
+
       <div class="photo-wrap">
-        <img class="photo" src="static/assets/img/photo.jpg" alt="Zhiwei Zhang">
+
+        <img
+          class="photo"
+          src="static/assets/img/photo.jpg"
+          alt="Zhiwei Zhang"
+        >
+
       </div>
+
     </header>
+
 
     <hr>
 
+
+    <!-- ==================================================
+         Education
+         ================================================== -->
+
     <section id="education">
+
       <h2>Education</h2>
 
+
       <div class="education-entry">
-        <div class="school">Shandong University, China</div>
-        <div>Ph.D. Candidate in Operations Research and Cybernetics</div>
-        <div>Sept. 2023 – Present</div>
+
+        <div>
+          Shandong University, China
+        </div>
+
+        <div>
+          Ph.D. Candidate in Operations Research and Cybernetics
+        </div>
+
+        <div>
+          Sept. 2023 – Present
+        </div>
+
         <div>
           Advisor:
           Prof.
-          <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
-             target="_blank" rel="noopener">Guanghui Wang</a>
+          <a
+            href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
+            target="_blank"
+            rel="noopener"
+          >
+            Guanghui Wang
+          </a>
         </div>
+
       </div>
+
 
       <div class="education-entry">
-        <div class="school">Harbin Institute of Technology, China</div>
-        <div>B.Sc. in Information and Computing Science</div>
-        <div>Sept. 2019 – Jun. 2023</div>
+
+        <div>
+          Harbin Institute of Technology, China
+        </div>
+
+        <div>
+          B.Sc. in Information and Computing Science
+        </div>
+
+        <div>
+          Sept. 2019 – Jun. 2023
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- ==================================================
+         Research Interests
+         ================================================== -->
 
     <section id="research">
+
       <h2>Research Interests</h2>
-      <p>Graph theory, Random graph, Probabilistic Method.</p>
+
+      <p>
+        Graph theory, Random graph, Probabilistic Method.
+      </p>
+
     </section>
+
+
+    <!-- ==================================================
+         Manuscripts
+         ================================================== -->
 
     <section id="manuscripts">
+
       <h2>Manuscripts</h2>
+
+
       <ul>
-        <li>
-          <span class="paper-title">Turán-type and tiling problems in oriented graphs.</span>
-          <span class="paper-meta">
-            Ming Chen, Wenxu Lu,
-            <a href="https://yunwang-sdu.github.io/yunwang.github.io/"
-               target="_blank" rel="noopener">Yun Wang</a>,
-            and <strong>Zhiwei Zhang</strong>.
-            [<a href="https://arxiv.org/abs/2603.21971" target="_blank" rel="noopener">arXiv</a>]
-          </span>
-        </li>
 
         <li>
-          <span class="paper-title">Ore-type condition for antidirected Hamilton cycles in oriented graphs.</span>
-          <span class="paper-meta">
-            <a href="https://sxkx.tjnu.edu.cn/info/1216/4569.htm"
-               target="_blank" rel="noopener">Junqing Cai</a>,
-            <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
-               target="_blank" rel="noopener">Guanghui Wang</a>,
-            <a href="https://yunwang-sdu.github.io/yunwang.github.io/"
-               target="_blank" rel="noopener">Yun Wang</a>,
-            and <strong>Zhiwei Zhang</strong>.
-            [<a href="https://arxiv.org/abs/2511.11302" target="_blank" rel="noopener">arXiv</a>]
+
+          <span class="paper-title">
+            Turán-type and tiling problems in oriented graphs.
           </span>
+
+          <span class="paper-meta">
+
+            Ming Chen,
+            Wenxu Lu,
+
+            <a
+              href="https://yunwang-sdu.github.io/yunwang.github.io/"
+              target="_blank"
+              rel="noopener"
+            >
+              Yun Wang
+            </a>,
+
+            and <strong>Zhiwei Zhang</strong>.
+
+            [
+            <a
+              href="https://arxiv.org/abs/2603.21971"
+              target="_blank"
+              rel="noopener"
+            >
+              arXiv
+            </a>
+            ]
+
+          </span>
+
         </li>
 
+
         <li>
-          <span class="paper-title">Arbitrary orientations of cycles in oriented graphs.</span>
-          <span class="paper-meta">
-            <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
-               target="_blank" rel="noopener">Guanghui Wang</a>,
-            <a href="https://yunwang-sdu.github.io/yunwang.github.io/"
-               target="_blank" rel="noopener">Yun Wang</a>,
-            and <strong>Zhiwei Zhang</strong>.
-            [<a href="https://arxiv.org/abs/2504.09794" target="_blank" rel="noopener">arXiv</a>]
+
+          <span class="paper-title">
+            Ore-type condition for antidirected Hamilton cycles in oriented graphs.
           </span>
+
+          <span class="paper-meta">
+
+            <a
+              href="https://sxkx.tjnu.edu.cn/info/1216/4569.htm"
+              target="_blank"
+              rel="noopener"
+            >
+              Junqing Cai
+            </a>,
+
+            <a
+              href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
+              target="_blank"
+              rel="noopener"
+            >
+              Guanghui Wang
+            </a>,
+
+            <a
+              href="https://yunwang-sdu.github.io/yunwang.github.io/"
+              target="_blank"
+              rel="noopener"
+            >
+              Yun Wang
+            </a>,
+
+            and <strong>Zhiwei Zhang</strong>.
+
+            [
+            <a
+              href="https://arxiv.org/abs/2511.11302"
+              target="_blank"
+              rel="noopener"
+            >
+              arXiv
+            </a>
+            ]
+
+          </span>
+
         </li>
+
+
+        <li>
+
+          <span class="paper-title">
+            Arbitrary orientations of cycles in oriented graphs.
+          </span>
+
+          <span class="paper-meta">
+
+            <a
+              href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
+              target="_blank"
+              rel="noopener"
+            >
+              Guanghui Wang
+            </a>,
+
+            <a
+              href="https://yunwang-sdu.github.io/yunwang.github.io/"
+              target="_blank"
+              rel="noopener"
+            >
+              Yun Wang
+            </a>,
+
+            and <strong>Zhiwei Zhang</strong>.
+
+            [
+            <a
+              href="https://arxiv.org/abs/2504.09794"
+              target="_blank"
+              rel="noopener"
+            >
+              arXiv
+            </a>
+            ]
+
+          </span>
+
+        </li>
+
       </ul>
+
     </section>
+
+
+    <!-- ==================================================
+         Journal publications
+         ================================================== -->
 
     <section id="journal-publications">
+
       <h2>Journal publications</h2>
+
+
       <ul>
+
         <li>
-          <span class="paper-title">Cycles and trees in randomly perturbed sparse digraphs.</span>
-          <span class="paper-meta">
-            <a href="https://math.ouc.edu.cn/2025/0921/c8925a507129/page.htm"
-               target="_blank" rel="noopener">Yulin Chang</a>,
-            <a href="https://faculty.sdu.edu.cn/wujichang/zh_CN/index.htm"
-               target="_blank" rel="noopener">Jichang Wu</a>,
-            and <strong>Zhiwei Zhang</strong>.
-            <span class="venue">Discrete Appl. Math.</span>, 382:176–182.
-            [<a href="https://doi.org/10.1016/j.dam.2025.11.046"
-                target="_blank" rel="noopener">Paper</a>]
+
+          <span class="paper-title">
+            Cycles and trees in randomly perturbed sparse digraphs.
           </span>
+
+          <span class="paper-meta">
+
+            <a
+              href="https://math.ouc.edu.cn/2025/0921/c8925a507129/page.htm"
+              target="_blank"
+              rel="noopener"
+            >
+              Yulin Chang
+            </a>,
+
+            <a
+              href="https://faculty.sdu.edu.cn/wujichang/zh_CN/index.htm"
+              target="_blank"
+              rel="noopener"
+            >
+              Jichang Wu
+            </a>,
+
+            and <strong>Zhiwei Zhang</strong>.
+
+            <span class="venue">
+              Discrete Appl. Math.
+            </span>,
+
+            382:176–182.
+
+            [
+            <a
+              href="https://doi.org/10.1016/j.dam.2025.11.046"
+              target="_blank"
+              rel="noopener"
+            >
+              Paper
+            </a>
+            ]
+
+          </span>
+
         </li>
+
       </ul>
+
     </section>
+
+
+    <!-- ==================================================
+         Notes
+         ================================================== -->
+
+    <section id="notes">
+
+      <h2>Notes</h2>
+
+      <ul>
+
+        <li>
+          Bandwidth theorem in digraphs.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ==================================================
+         Talks & Conferences
+         ================================================== -->
 
     <section id="talks">
+
       <h2>Talks &amp; Conferences</h2>
 
+
       <h3>Talks</h3>
+
+
       <ul>
-        <li>
-          <strong>Youth Forum on Graph Theory &amp; Combinatorics at SDU</strong><br>
-          Talk: “Arbitrary orientations of cycles in oriented graphs”, Apr. 2025, Jinan, China.
-        </li>
 
         <li>
-          <strong>Shanghai Center for Mathematical Science PhD Workshop
-          (Graph Theory &amp; Combinatorics)</strong><br>
-          Talk: “Arbitrary orientations of cycles in oriented graphs”, Dec. 2025, Shanghai, China.
+
+          <strong>
+            Youth Forum on Graph Theory &amp; Combinatorics at SDU
+          </strong>
+
+          <br>
+
+          Talk:
+          “Arbitrary orientations of cycles in oriented graphs”,
+          Apr. 2025,
+          Jinan, China.
+
         </li>
+
+
+        <li>
+
+          <strong>
+            Shanghai Center for Mathematical Science PhD Workshop
+            (Graph Theory &amp; Combinatorics)
+          </strong>
+
+          <br>
+
+          Talk:
+          “Arbitrary orientations of cycles in oriented graphs”,
+          Dec. 2025,
+          Shanghai, China.
+
+        </li>
+
       </ul>
+
 
       <h3>Conferences</h3>
+
+
       <ul>
-        <li>
-          <strong>Tianyuan Symposium on Graph Theory and Combinatorics</strong>,
-          Oct. 2024, Kunming, China.
-        </li>
 
         <li>
-          <strong>2025 Discrete Mathematics Symposium</strong>,
-          Mar. 2025, Jinan, China.
+
+          <strong>
+            Tianyuan Symposium on Graph Theory and Combinatorics
+          </strong>,
+
+          Oct. 2024,
+          Kunming, China.
+
         </li>
 
-        <li>
-          <strong>Annual Meeting of the Graph Theory &amp; Combinatorics Branch
-          of the Operations Research Society of China</strong>,
-          Jul. 2025, Yantai, China.
-        </li>
 
         <li>
-          <strong>Beijing University of Posts and Telecommunications Summer School:
-          Graph Theory &amp; Combinatorics</strong>,
-          Aug. 2025, Beijing, China.
+
+          <strong>
+            2025 Discrete Mathematics Symposium
+          </strong>,
+
+          Mar. 2025,
+          Jinan, China.
+
         </li>
 
+
         <li>
-          <strong>The 23rd Annual Conference of the China Society for Industrial and Applied Mathematics</strong><br>
-          Poster: “Arbitrary orientations of cycles in oriented graphs”,
-          Oct. 2025, Changsha, China.
+
+          <strong>
+            Annual Meeting of the Graph Theory &amp; Combinatorics Branch
+            of the Operations Research Society of China
+          </strong>,
+
+          Jul. 2025,
+          Yantai, China.
+
         </li>
+
+
+        <li>
+
+          <strong>
+            Beijing University of Posts and Telecommunications Summer School:
+            Graph Theory &amp; Combinatorics
+          </strong>,
+
+          Aug. 2025,
+          Beijing, China.
+
+        </li>
+
+
+        <li>
+
+          <strong>
+            The 23rd Annual Conference of the China Society for
+            Industrial and Applied Mathematics
+          </strong>
+
+          <br>
+
+          Poster:
+          “Arbitrary orientations of cycles in oriented graphs”,
+          Oct. 2025,
+          Changsha, China.
+
+        </li>
+
       </ul>
+
     </section>
 
-    <!--
-      Notes can be added here later without creating a separate page:
-      <section id="notes">
-        <h2>Notes</h2>
-        <ul>
-          <li>...</li>
-        </ul>
-      </section>
-    -->
+
+    <!-- ==================================================
+         Footer
+         ================================================== -->
 
     <footer>
+
       Zhiwei Zhang
+
       <span class="sep">|</span>
-      <a href="https://github.com/zhiwei-sdu" target="_blank" rel="noopener">GitHub</a>
-      <span class="sep">|</span>
-      <a href="https://github.com/zhiwei-sdu/homepage/blob/main/LICENSE"
-         target="_blank" rel="noopener">License</a>
+
+      <a
+        href="https://github.com/zhiwei-sdu"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
     </footer>
+
   </main>
+
 </body>
+
 </html>
