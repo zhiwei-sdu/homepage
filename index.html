@@ -1,148 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1400" />
-    <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="senli1073" />
-    <title id="title"></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhiwei Zhang's academic homepage">
+  <meta name="author" content="Zhiwei Zhang">
+  <title>Zhiwei Zhang</title>
 
-    <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+  <style>
+    :root {
+      --text: #111;
+      --muted: #555;
+      --link: #1b4f8a;
+      --rule: #b9b9b9;
+      --paper: #fff;
+    }
 
-    <!-- Bootstrap icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    * { box-sizing: border-box; }
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&display=swap"
-        rel="stylesheet" />
+    html { scroll-behavior: smooth; }
 
-    <!-- Core theme CSS -->
-    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-    <!-- Bootstrap core JS -->
-    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+    .page {
+      width: min(900px, calc(100% - 40px));
+      margin: 34px auto 24px;
+    }
 
-    <!-- Polyfill -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
 
-    <!-- Markdown -->
-    <script type="text/javascript" src="static/js/marked.min.js"></script>
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
 
-    <!-- MathJax -->
-    <script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        },
-        options: {
-            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        },
-        startup: {
-            typeset: false
-        }
-    };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 190px;
+      gap: 38px;
+      align-items: start;
+    }
 
-    <!-- YAML -->
-    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 1.15;
+    }
 
-    <!-- Core JS -->
-    <script type="text/javascript" src="static/js/scripts.js"></script>
+    .affiliation {
+      margin: 0 0 14px;
+    }
+
+    .contact {
+      margin: 0 0 15px;
+    }
+
+    .nav {
+      margin: 16px 0 0;
+      line-height: 1.8;
+    }
+
+    .nav a {
+      white-space: nowrap;
+    }
+
+    .sep {
+      color: #777;
+      padding: 0 6px;
+    }
+
+    .photo-wrap {
+      text-align: right;
+    }
+
+    .photo {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border: 0;
+      display: inline-block;
+    }
+
+    .orcid-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: -3px;
+      margin-left: 5px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 24px 0 26px;
+    }
+
+    section {
+      scroll-margin-top: 18px;
+      margin: 0 0 30px;
+    }
+
+    h2 {
+      margin: 0 0 13px;
+      font-size: 23px;
+      font-weight: normal;
+    }
+
+    h3 {
+      margin: 19px 0 8px;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 8px 0 0 23px;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 0 12px;
+      padding-left: 2px;
+    }
+
+    .paper-title {
+      font-weight: normal;
+    }
+
+    .paper-meta {
+      display: block;
+      margin-top: 1px;
+    }
+
+    .venue {
+      font-style: italic;
+    }
+
+    .education-entry {
+      margin: 0 0 15px;
+    }
+
+    .education-entry .school {
+      font-weight: normal;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      margin-top: 34px;
+      padding: 13px 0 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 28px, 900px);
+        margin-top: 22px;
+      }
+
+      .masthead {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .photo-wrap {
+        text-align: left;
+        order: -1;
+      }
+
+      .photo {
+        width: 155px;
+        height: 155px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .nav {
+        line-height: 2;
+      }
+    }
+  </style>
 </head>
 
-<body id="page-top">
-    <!-- Navigation -->
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#avatar"></a>
+<body>
+  <main class="page">
+    <header class="masthead" id="home">
+      <div>
+        <h1>
+          Zhiwei Zhang | 张志伟
+          <a href="https://orcid.org/0009-0007-6706-6070"
+             target="_blank"
+             rel="noopener"
+             aria-label="View ORCID record">
+            <img class="orcid-icon" src="static/assets/img/ORCID.svg" alt="ORCID iD">
+          </a>
+        </h1>
 
-            <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>-->
+        <p class="affiliation">
+          I am currently a Ph.D. student at the Interdisciplinary Research Center,
+          Shandong University, Jinan.
+        </p>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
-                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#talks">TALKS & CONFERENCES</a>
-                    </li>
-                </ul>
-            </div>
+        <p class="contact">
+          Email:
+          <a href="mailto:zhiweizh@mail.sdu.edu.cn">zhiweizh@mail.sdu.edu.cn</a>
+        </p>
+
+        <nav class="nav" aria-label="Homepage sections">
+          <a href="#education">Education</a><span class="sep">|</span>
+          <a href="#research">Research Interests</a><span class="sep">|</span>
+          <a href="#manuscripts">Manuscripts</a><span class="sep">|</span>
+          <a href="#journal-publications">Journal publications</a><span class="sep">|</span>
+          <a href="#talks">Talks &amp; Conferences</a>
+        </nav>
+      </div>
+
+      <div class="photo-wrap">
+        <img class="photo" src="static/assets/img/photo.jpg" alt="Zhiwei Zhang">
+      </div>
+    </header>
+
+    <hr>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="education-entry">
+        <div class="school">Shandong University, China</div>
+        <div>Ph.D. Candidate in Operations Research and Cybernetics</div>
+        <div>Sept. 2023 – Present</div>
+        <div>
+          Advisor:
+          Prof.
+          <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
+             target="_blank" rel="noopener">Guanghui Wang</a>
         </div>
-    </nav>
+      </div>
 
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/background.jpg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
-            </div>
-        </div>
+      <div class="education-entry">
+        <div class="school">Harbin Institute of Technology, China</div>
+        <div>B.Sc. in Information and Computing Science</div>
+        <div>Sept. 2019 – Jun. 2023</div>
+      </div>
     </section>
 
-    <!-- Photo -->
-    <div class="container px-5">
-        <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.jpg" alt="photo">
-        </div>
-    </div>
-
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <div class="main-body" id="home-md"></div>
-        </div>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <p>Graph theory, Random graph, Probabilistic Method.</p>
     </section>
 
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
+    <section id="manuscripts">
+      <h2>Manuscripts</h2>
+      <ul>
+        <li>
+          <span class="paper-title">Turán-type and tiling problems in oriented graphs.</span>
+          <span class="paper-meta">
+            Ming Chen, Wenxu Lu,
+            <a href="https://yunwang-sdu.github.io/yunwang.github.io/"
+               target="_blank" rel="noopener">Yun Wang</a>,
+            and <strong>Zhiwei Zhang</strong>.
+            [<a href="https://arxiv.org/abs/2603.21971" target="_blank" rel="noopener">arXiv</a>]
+          </span>
+        </li>
+
+        <li>
+          <span class="paper-title">Ore-type condition for antidirected Hamilton cycles in oriented graphs.</span>
+          <span class="paper-meta">
+            <a href="https://sxkx.tjnu.edu.cn/info/1216/4569.htm"
+               target="_blank" rel="noopener">Junqing Cai</a>,
+            <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
+               target="_blank" rel="noopener">Guanghui Wang</a>,
+            <a href="https://yunwang-sdu.github.io/yunwang.github.io/"
+               target="_blank" rel="noopener">Yun Wang</a>,
+            and <strong>Zhiwei Zhang</strong>.
+            [<a href="https://arxiv.org/abs/2511.11302" target="_blank" rel="noopener">arXiv</a>]
+          </span>
+        </li>
+
+        <li>
+          <span class="paper-title">Arbitrary orientations of cycles in oriented graphs.</span>
+          <span class="paper-meta">
+            <a href="https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"
+               target="_blank" rel="noopener">Guanghui Wang</a>,
+            <a href="https://yunwang-sdu.github.io/yunwang.github.io/"
+               target="_blank" rel="noopener">Yun Wang</a>,
+            and <strong>Zhiwei Zhang</strong>.
+            [<a href="https://arxiv.org/abs/2504.09794" target="_blank" rel="noopener">arXiv</a>]
+          </span>
+        </li>
+      </ul>
     </section>
 
-
-
-    <!-- Talks -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="talks">
-        <div class="container px-5">
-            <header>
-                <h2 id="talks-subtitle"><i class="bi bi-mic-fill"></i> TALKS & CONFERENCES</h2>
-            </header>
-            <div class="main-body" id="talks-md"></div>
-        </div>
+    <section id="journal-publications">
+      <h2>Journal publications</h2>
+      <ul>
+        <li>
+          <span class="paper-title">Cycles and trees in randomly perturbed sparse digraphs.</span>
+          <span class="paper-meta">
+            <a href="https://math.ouc.edu.cn/2025/0921/c8925a507129/page.htm"
+               target="_blank" rel="noopener">Yulin Chang</a>,
+            <a href="https://faculty.sdu.edu.cn/wujichang/zh_CN/index.htm"
+               target="_blank" rel="noopener">Jichang Wu</a>,
+            and <strong>Zhiwei Zhang</strong>.
+            <span class="venue">Discrete Appl. Math.</span>, 382:176–182.
+            [<a href="https://doi.org/10.1016/j.dam.2025.11.046"
+                target="_blank" rel="noopener">Paper</a>]
+          </span>
+        </li>
+      </ul>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-bottom text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/senli1073">Github</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link" href="https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE">License</a>
-            </div>
-        </div>
+    <section id="talks">
+      <h2>Talks &amp; Conferences</h2>
+
+      <h3>Talks</h3>
+      <ul>
+        <li>
+          <strong>Youth Forum on Graph Theory &amp; Combinatorics at SDU</strong><br>
+          Talk: “Arbitrary orientations of cycles in oriented graphs”, Apr. 2025, Jinan, China.
+        </li>
+
+        <li>
+          <strong>Shanghai Center for Mathematical Science PhD Workshop
+          (Graph Theory &amp; Combinatorics)</strong><br>
+          Talk: “Arbitrary orientations of cycles in oriented graphs”, Dec. 2025, Shanghai, China.
+        </li>
+      </ul>
+
+      <h3>Conferences</h3>
+      <ul>
+        <li>
+          <strong>Tianyuan Symposium on Graph Theory and Combinatorics</strong>,
+          Oct. 2024, Kunming, China.
+        </li>
+
+        <li>
+          <strong>2025 Discrete Mathematics Symposium</strong>,
+          Mar. 2025, Jinan, China.
+        </li>
+
+        <li>
+          <strong>Annual Meeting of the Graph Theory &amp; Combinatorics Branch
+          of the Operations Research Society of China</strong>,
+          Jul. 2025, Yantai, China.
+        </li>
+
+        <li>
+          <strong>Beijing University of Posts and Telecommunications Summer School:
+          Graph Theory &amp; Combinatorics</strong>,
+          Aug. 2025, Beijing, China.
+        </li>
+
+        <li>
+          <strong>The 23rd Annual Conference of the China Society for Industrial and Applied Mathematics</strong><br>
+          Poster: “Arbitrary orientations of cycles in oriented graphs”,
+          Oct. 2025, Changsha, China.
+        </li>
+      </ul>
+    </section>
+
+    <!--
+      Notes can be added here later without creating a separate page:
+      <section id="notes">
+        <h2>Notes</h2>
+        <ul>
+          <li>...</li>
+        </ul>
+      </section>
+    -->
+
+    <footer>
+      Zhiwei Zhang
+      <span class="sep">|</span>
+      <a href="https://github.com/zhiwei-sdu" target="_blank" rel="noopener">GitHub</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/zhiwei-sdu/homepage/blob/main/LICENSE"
+         target="_blank" rel="noopener">License</a>
     </footer>
-
+  </main>
 </body>
-
 </html>
